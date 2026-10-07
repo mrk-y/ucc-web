@@ -1,6 +1,5 @@
 <?php
 declare(strict_types=1);
-
 require_once __DIR__ . '/../../bootstrap.php';
 require_once __DIR__ . '/../../app/Support/helper.php';
 
@@ -9,9 +8,7 @@ use Repo\BORRepository;
 use Core\User;
 use Core\Database;
 use Core\Token;
-
 $pageTitle = 'Board of Regents';
-
 User::requireAuthentication();
 
 $serv = new BORService();
@@ -201,11 +198,10 @@ if ($_SERVER['REQUEST_METHOD'] === 'POST') {
 <script src="https://cdn.jsdelivr.net/npm/sweetalert2@10"></script>
 <script>
 lucide.createIcons();
-
 document.querySelectorAll(".menu-title").forEach(button => {
-    button.addEventListener("click", () => {
-        button.parentElement.classList.toggle("open");
-    });
+	button.addEventListener("click", () => {
+		button.parentElement.classList.toggle("open");
+	});
 });
 
 // Dirty checker
