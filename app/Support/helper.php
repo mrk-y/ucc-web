@@ -33,3 +33,32 @@ function jsonResponse(int $statusCode = 200, string $message = '', array $data =
 
     exit;
 }
+
+function timeAgo(string $datetime): string {
+    $date = new DateTime($datetime);
+    $now = new DateTime();
+
+    $diff = $now->diff($date);
+
+    if ($diff->y > 0) {
+        return $diff->y . ' ' . ($diff->y === 1 ? 'year' : 'years') . ' ago';
+    }
+
+    if ($diff->m > 0) {
+        return $diff->m . ' ' . ($diff->m === 1 ? 'month' : 'months') . ' ago';
+    }
+
+    if ($diff->d > 0) {
+        return $diff->d . ' ' . ($diff->d === 1 ? 'day' : 'days') . ' ago';
+    }
+
+    if ($diff->h > 0) {
+        return $diff->h . ' ' . ($diff->h === 1 ? 'hour' : 'hours') . ' ago';
+    }
+
+    if ($diff->i > 0) {
+        return $diff->i . ' ' . ($diff->i === 1 ? 'minute' : 'minutes') . ' ago';
+    }
+
+    return 'just now';
+}

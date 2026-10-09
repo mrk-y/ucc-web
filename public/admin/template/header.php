@@ -6,7 +6,7 @@
 	<div class="header-right">
 <button
 	type="button"
-	onclick="window.location.href='/user/homepage.html'"
+	onclick="window.location.href='/index.php'"
 	class="visit-website"
 	onmouseover="this.style.transform='translateY(-2px)';this.style.background='linear-gradient(135deg,#00734a,#004d32)';this.style.borderColor='#f2ca68';this.style.boxShadow='0 12px 28px rgba(0,66,43,.28),0 0 0 4px rgba(216,176,86,.10)'"
 	onmouseout="this.style.transform='translateY(0)';this.style.background='linear-gradient(135deg,#006a42,#00422b)';this.style.borderColor='#d8b056';this.style.boxShadow='0 8px 20px rgba(0,66,43,.20)'"

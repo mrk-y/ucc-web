@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: localhost:3306
--- Generation Time: Oct 06, 2026 at 09:34 PM
+-- Generation Time: Oct 07, 2026 at 07:45 AM
 -- Server version: 11.8.6-MariaDB-5ubuntu0.1 from Ubuntu
 -- PHP Version: 8.5.4
 
@@ -195,8 +195,11 @@ INSERT INTO `posts` (`id`, `category_id`, `title`, `slug`, `excerpt`, `content`,
 (4, 1, 'hello world 2', 'hello world', '', '<p>iii</p>', '0dbfee59e3d26e581b96deecf4303da7.webp', 1, 1, 'published', '2026-10-05 01:14:01', '2026-10-07 00:00:00', '2026-10-05 03:27:56', '2026-10-05 03:22:01', NULL, 0),
 (5, 5, 'hello world 3', 'iiiiiiii', '', '<p>kkkkkkkk</p>', 'c970b59ba77f6a6de525f2652f6601bb.webp', 1, 1, 'published', '2026-10-05 03:56:32', '2026-10-09 00:00:00', '2026-10-05 04:14:24', NULL, NULL, 0),
 (6, 4, 'Ito p', 'oitis', 'eeeeee', '<p>dddd</p>', '8411e6160ff0747f5e0d2bc1e9be339d.webp', 1, 1, 'published', '2026-10-05 05:59:55', '2026-10-23 00:00:00', '2026-10-05 06:01:02', NULL, NULL, 0),
-(7, 1, 'ddddd', 'ddddddd', 'ddddddd', '<ol><li><span></span><strong>dddddd</strong></li></ol>', NULL, 1, 1, 'draft', '2026-10-05 06:02:05', '2026-10-10 00:00:00', '2026-10-05 06:02:05', NULL, NULL, 1),
-(8, 1, 'dddddddddd', 'hello', '', '<p>hhhhhhhhhh</p>', NULL, 1, 1, 'draft', '2026-10-05 07:30:08', '2026-10-05 00:00:00', '2026-10-05 07:30:43', NULL, NULL, 1);
+(7, 1, 'news', 'news', 'news', '<p>news</p>', '40db4fd959d89f1d7c1e382ed7b9a154.webp', 1, 1, 'published', '2026-10-05 06:02:05', '2026-10-10 00:00:00', '2026-10-07 07:07:06', NULL, NULL, 1),
+(8, 4, 'admission', 'admission', '', '<p>admission</p>', '1f9a76f8629240764123a79ab4f9108a.webp', 1, 1, 'published', '2026-10-05 07:30:08', '2026-10-05 00:00:00', '2026-10-07 06:45:21', NULL, NULL, 1),
+(9, 2, 'student', 'student', '', '<p>student</p>', NULL, 1, 1, 'published', '2026-10-07 05:15:18', '2026-10-07 00:00:00', '2026-10-07 05:15:18', NULL, NULL, 1),
+(10, 2, 'sports', 'sports', '', '<p>sports</p>', 'b20694693db70712422cc40ed4fa7a2d.webp', 1, 1, 'published', '2026-10-07 06:00:49', '2026-10-06 00:00:00', '2026-10-07 06:01:37', NULL, NULL, 1),
+(11, 3, 'community', 'community', '', '<p>community</p>', '88ab718f552cc339adba2d1466ea9341.webp', 1, 1, 'published', '2026-10-07 06:23:02', '2026-10-07 00:00:00', '2026-10-07 06:23:02', NULL, NULL, 1);
 
 -- --------------------------------------------------------
 
@@ -348,7 +351,7 @@ ALTER TABLE `exoff`
 -- AUTO_INCREMENT for table `posts`
 --
 ALTER TABLE `posts`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=9;
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
 
 --
 -- AUTO_INCREMENT for table `programs`

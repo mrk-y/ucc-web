@@ -150,4 +150,59 @@ final class PostsRepository {
         $stmt = $this->conn->prepare($query);
         $stmt->execute([$postId]);
     }
+
+    public function fetchStudentLifePosts(): array {
+        $query = 'SELECT * FROM posts
+            WHERE category_id = 2
+            AND active = 1
+            AND archived_at IS NULL
+            AND published_at <= CURRENT_TIMESTAMP
+            ORDER BY published_at DESC';
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function fetchCommunityExtensionPosts(): array {
+        $query = 'SELECT * FROM posts
+                  WHERE category_id = 3
+                  AND active = 1
+                  AND archived_at IS NULL
+                  AND published_at <= CURRENT_TIMESTAMP
+                  ORDER BY published_at DESC';
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function fetchAdmissionPosts(): array {
+        $query = 'SELECT * FROM posts
+                  WHERE category_id = 4
+                  AND active = 1
+                  AND archived_at IS NULL
+                  AND published_at <= CURRENT_TIMESTAMP
+                  ORDER BY published_at DESC';
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
+
+    public function fetchUniversityNewsPosts(): array {
+        $query = 'SELECT * FROM posts
+                  WHERE category_id = 1
+                  AND active = 1
+                  AND archived_at IS NULL
+                  AND published_at <= CURRENT_TIMESTAMP
+                  ORDER BY published_at DESC';
+
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }

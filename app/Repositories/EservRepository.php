@@ -88,4 +88,12 @@ final class EservRepository {
         $stmt->execute([$serviceId]);
     }
 
+    public function fetchServices(): array {
+        $query = 'SELECT * FROM eserv
+            WHERE active = 1';
+        $stmt = $this->conn->prepare($query);
+        $stmt->execute();
+
+        return $stmt->fetchAll(PDO::FETCH_ASSOC);
+    }
 }
